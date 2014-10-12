@@ -1,0 +1,6 @@
+library(datasets)
+plot3 <- read.csv("household_power_consuption.csv")
+plot(plot3$Time, plot3$Sub_metering_1, ylab="Energy sub metering")
+lines(plot3$Sub_metering_2, col="red")
+lines(plot3$Sub_metering_3, col="blue")
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"), lty=c(1,1,1))
